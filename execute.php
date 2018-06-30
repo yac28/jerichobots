@@ -19,7 +19,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
-if($text == "start")
+if($text == "/start")
 	$response = "Ciao bellu";
 
 header("Content-Type: application/json");
