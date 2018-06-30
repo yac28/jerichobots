@@ -1,5 +1,5 @@
 <?php
-$content = file_get_contents("php://input");
+$content = file_get_contents("https://api.telegram.org/602808275:AAEArhxsxhUjnyXAx5-88M03WcTBN6Ruw2U/start");
 $update = json_decode($content, true);
 
 if(!$update)
@@ -7,8 +7,8 @@ if(!$update)
   exit;
 }
 
-$user_id = $result['message']['from']['id'];
-$text = $result['message']['text'];
+$user_id = $update['message']['from']['id'];
+$text = $update['message']['text'];
 $token = '602808275:AAEArhxsxhUjnyXAx5-88M03WcTBN6Ruw2U';
 
 
